@@ -1,8 +1,11 @@
 var path = require('path');
 var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = {
-  entry: [
+module.exports = function (env){
+  let isProd = env && env.production;
+
+  let entryDev = [
     'react-hot-loader/patch',
     // activate HMR for React
 
@@ -16,42 +19,60 @@ module.exports = {
 
     './src/index.js',
     // the entry point of our app
-  ],
+  ];
 
-  output: {
-    filename: 'bundle.js',
-    // the output bundle
+  let entryProd = './src/index.js';
 
+  let outputDev = {
+    filename: 'static/bundle.js',
     path: path.resolve(__dirname, 'dist'),
-
-    publicPath: '/static/'
+    publicPath: '/'
     // necessary for HMR to know where to load the hot update chunks
-  },
+  };
 
-  devtool: 'inline-source-map',
+  let outputProd = {
+    filename: 'static/bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: './'
+  };
+
+  let plugins = [];
+  if(isProd){
+    plugins.push(new webpack.optimize.UglifyJsPlugin({
+      sourceMap: true,
+      comments: false
+    }));
+  }else{
+    plugins.push(new webpack.HotModuleReplacementPlugin()); // enable HMR globally
+    plugins.push(new webpack.NamedModulesPlugin()); // prints more readable module names in the browser console on HMR updates
+    plugins.push(new webpack.NoEmitOnErrorsPlugin()); // do not emit compiled assets that include errors
+  }
+
+  plugins.push(new HtmlWebpackPlugin({
+    template: './public/index.html',
+    inject: true
+  }));
+
+  return {
+  entry: isProd ? entryProd : entryDev,
+
+  output: isProd ? outputProd : outputDev,
+
+  devtool: isProd ? 'source-map' : 'inline-source-map',
 
   module: {
     rules: [
       {
         test: /\.jsx?$/,
         use: [
-          'babel-loader',
+          'babel-loader'
         ],
-        exclude: /node_modules/,
-      },
+        exclude: /node_modules/
+      }
     ],
   },
 
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    // enable HMR globally
-
-    new webpack.NamedModulesPlugin(),
-    // prints more readable module names in the browser console on HMR updates
-
-    new webpack.NoEmitOnErrorsPlugin(),
-    // do not emit compiled assets that include errors
-  ],
+  plugins: plugins,
 
   devServer: {
     contentBase: 'public',
@@ -64,4 +85,5 @@ module.exports = {
     hot: true,
     // enable HMR on the server
   },
+};
 };

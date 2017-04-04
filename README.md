@@ -3,10 +3,11 @@ react-hot-boilerplate
 
 My React Boilerplat with Webpack.
 
-Features: 
-    - React with Babel Loader
-    - React Hot Module Replacement
-    - TODO...
+Features:   
+ - Webpack 2.3
+ - React with Babel Loader
+ - React Hot Module Replacement v3.0
+ - TODO...
 
 Based on [gaearon/react-hot-boilerplate](https://github.com/gaearon/react-hot-boilerplate)
 
