@@ -56,7 +56,7 @@ module.exports = function (env){
   }
 
   plugins.push(new HtmlWebpackPlugin({
-    template: './public/index.html',
+    template: './index.html',
     inject: true
   }));
 
@@ -93,14 +93,16 @@ module.exports = function (env){
                 // use style-loader in development
                 fallback: "style-loader"
             })
-      }
+      },
+      { test: /\.(ttf.*|eot.*|woff.*|ogg|mp3)$/, loader: 'file-loader'},
+      { test: /.(png|jpe?g|gif|svg.*)$/, loader: 'file-loader!img-loader?optimizationLevel=7&progressive=true'}
     ]
   },
 
   plugins: plugins,
 
   devServer: {
-    contentBase: 'public',
+    contentBase: 'assets',
     host: 'localhost',
     port: 3000,
 
