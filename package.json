@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gaearon/react-hot-boilerplate.git"
+    "url": "https://github.com/BrOrlandi/react-hot-boilerplate.git"
   },
   "keywords": [
     "react",
@@ -24,12 +24,12 @@
     "edit",
     "webpack"
   ],
-  "author": "Dan Abramov <dan.abramov@me.com> (http://github.com/gaearon)",
+  "author": "Bruno Orlandi <brorlandi@gmail.com> (http://github.com/BrOrlandi)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gaearon/react-hot-boilerplate/issues"
+    "url": "https://github.com/BrOrlandi/react-hot-boilerplate/issues"
   },
-  "homepage": "https://github.com/gaearon/react-hot-boilerplate",
+  "homepage": "https://github.com/BrOrlandi/react-hot-boilerplate",
   "devDependencies": {
     "babel-core": "^6.22.1",
     "babel-loader": "^6.2.10",
@@ -40,8 +40,8 @@
     "cross-env": "^3.1.4",
     "react-hot-loader": "^3.0.0-beta.6",
     "rimraf": "^2.6.0",
-    "webpack": "^2.2.0",
-    "webpack-dev-server": "^2.2.0"
+    "webpack": "^2.3.3",
+    "webpack-dev-server": "^2.4.2"
   },
   "dependencies": {
     "babel-eslint": "^7.1.1",
