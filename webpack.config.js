@@ -1,9 +1,16 @@
 var path = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+
 
 module.exports = function (env){
   let isProd = env && env.production;
+
+  const extractSass = new ExtractTextPlugin({
+    filename: "[name].[contenthash].css",
+    disable: !isProd
+});
 
   let entryDev = [
     'react-hot-loader/patch',
@@ -53,6 +60,8 @@ module.exports = function (env){
     inject: true
   }));
 
+  plugins.push(extractSass);
+
   return {
   entry: isProd ? entryProd : entryDev,
 
@@ -68,8 +77,24 @@ module.exports = function (env){
           'babel-loader'
         ],
         exclude: /node_modules/
+      },
+      {
+            test: /\.scss$/,
+            use: extractSass.extract({
+                use: [{
+                    loader: "css-loader", options: {
+                    sourceMap: true
+                  }
+                }, {
+                    loader: "sass-loader", options: {
+                    sourceMap: true
+                  }
+                }],
+                // use style-loader in development
+                fallback: "style-loader"
+            })
       }
-    ],
+    ]
   },
 
   plugins: plugins,

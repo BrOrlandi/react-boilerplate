@@ -1,0 +1,7 @@
+.counter {
+    background-color: green;
+
+    &:hover{
+        background-color: lighten(black, 49%);
+    }
+}
