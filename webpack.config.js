@@ -73,9 +73,20 @@ module.exports = function (env){
     rules: [
       {
         test: /\.jsx?$/,
-        use: [
-          'babel-loader'
-        ],
+        use: {
+          loader: 'babel-loader',
+          options: {
+            'babelrc': false, // prevent conflicts with .babelrc used by Jest tests
+            'presets': [
+              ['es2015', {'modules': false}],
+              'stage-2',
+              'react'
+            ],
+            'plugins': [
+              'react-hot-loader/babel'
+            ]
+          }
+        },
         exclude: /node_modules/
       },
       {

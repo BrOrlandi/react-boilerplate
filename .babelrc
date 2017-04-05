@@ -1,6 +1,6 @@
-{
+{ // This file is used by Jest only, for the application babel config see the webpack.config.js
   "presets": [
-    ["es2015", {"modules": false}],
+    "es2015",
     "stage-2",
     "react"
   ],

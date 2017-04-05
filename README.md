@@ -11,13 +11,13 @@ Features:
  - File Loader
  - Image Loader with optimization
  - ESLint
+ - Jest for Tests
 
 Based on [gaearon/react-hot-boilerplate](https://github.com/gaearon/react-hot-boilerplate)
 
 Based on the guide available at https://webpack.js.org/guides/hmr-react/
 
 ## TODO
- - Jest tests
  - Jest Enzyme
  - Autoprefixer
  

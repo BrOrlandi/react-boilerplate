@@ -6,7 +6,9 @@
     "start": "webpack-dev-server",
     "lint": "eslint src",
     "prebuild": "rimraf dist",
-    "build": "webpack -p --env.production"
+    "build": "webpack -p --env.production",
+    "test": "jest",
+    "coverage": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -31,6 +33,7 @@
   "homepage": "https://github.com/BrOrlandi/react-hot-boilerplate",
   "devDependencies": {
     "babel-core": "^6.22.1",
+    "babel-jest": "^19.0.0",
     "babel-loader": "^6.2.10",
     "babel-preset-es2015": "^6.22.0",
     "babel-preset-react": "^6.22.0",
@@ -40,6 +43,8 @@
     "file-loader": "^0.11.1",
     "html-webpack-plugin": "^2.28.0",
     "img-loader": "^2.0.0",
+    "jest": "^19.0.2",
+    "jest-faustao-errou": "^1.0.0",
     "node-sass": "^4.5.2",
     "react-hot-loader": "^3.0.0-beta.6",
     "rimraf": "^2.6.0",
@@ -54,5 +59,11 @@
     "eslint-plugin-react": "^6.9.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "testResultsProcessor": "<rootDir>/node_modules/jest-faustao-errou/index.js"
   }
 }
