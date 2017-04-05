@@ -20,6 +20,9 @@ Based on the guide available at https://webpack.js.org/guides/hmr-react/
 
 ## TODO
  - Autoprefixer
+ - Redux branch
+ - React Router
+ - Bootstrap
  
 ### Usage
 
