@@ -10,6 +10,7 @@ Features:
  - Sass Loader
  - File Loader
  - Image Loader with optimization
+ - ESLint
 
 Based on [gaearon/react-hot-boilerplate](https://github.com/gaearon/react-hot-boilerplate)
 

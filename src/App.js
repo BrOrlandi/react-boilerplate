@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import "../styles/styles.scss";
+import '../styles/styles.scss';
 
 import Layout from './Layout';
 import Counter from './Counter';

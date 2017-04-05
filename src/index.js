@@ -4,13 +4,15 @@ import ReactDOM from 'react-dom';
 import App from './App';
 
 const rootEl = document.getElementById('root');
-const render = Component =>
+
+const render = () =>{
   ReactDOM.render(
     <AppContainer>
-      <Component />
+      <App/>
     </AppContainer>,
     rootEl
   );
+}
 
-render(App);
-if (module.hot) module.hot.accept('./App', () => render(App));
+render();
+if (module.hot) module.hot.accept('./App', () => render());
