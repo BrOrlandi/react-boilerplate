@@ -1,7 +1,7 @@
-react-hot-boilerplate
+react-boilerplate
 =====================
 
-My React Boilerplat with Webpack.
+My React Boilerplate with Webpack.
 
 Features:   
  - Webpack 2.3
@@ -18,7 +18,9 @@ Based on the guide available at https://webpack.js.org/guides/hmr-react/
 
 ## TODO
  - Jest tests
-
+ - Jest Enzyme
+ - Autoprefixer
+ 
 ### Usage
 
 ```
