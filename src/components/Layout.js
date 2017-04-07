@@ -1,6 +1,6 @@
 import React from 'react';
 
-import boom from '../assets/images/boom.gif';
+import boom from '../../assets/images/boom.gif';
 
 export default function Layout({ children }) {
   return (
