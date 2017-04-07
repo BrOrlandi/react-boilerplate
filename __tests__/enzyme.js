@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import Counter from '../src/Counter';
+import Counter from '../src/containers/Counter';
 
 describe('Counter component',() => {
     it('should render without throwing an error', ()=>{
