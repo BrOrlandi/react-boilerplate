@@ -59,8 +59,9 @@
     "webpack-dev-server": "^2.4.2"
   },
   "dependencies": {
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "prop-types": "^15.5.3",
+    "react": "^15.5.1",
+    "react-dom": "^15.5.2"
   },
   "jest": {
     "testPathIgnorePatterns": [

@@ -15,4 +15,5 @@ const render = () =>{
 }
 
 render();
-if (module.hot) module.hot.accept('./App', () => render());
+// eslint-disable-next-line
+if (module.hot) module.hot.accept('./components/App', () => render()); // react hot reloader
