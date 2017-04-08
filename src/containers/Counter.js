@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux';
 import { incrementCounter, decrementCounter, resetCounter } from '../actions/counterActions';
+import PropTypes from 'prop-types';
 
 let Counter = ({counter, onIncrement, onDecrement, onReset}) => {
   return(
@@ -12,6 +13,13 @@ let Counter = ({counter, onIncrement, onDecrement, onReset}) => {
     </div>
   )
 };
+
+Counter.propTypes = {
+    counter: PropTypes.number,
+    onIncrement: PropTypes.func,
+    onDecrement: PropTypes.func,
+    onReset: PropTypes.func
+}
 
 const mapStateToProps = (state) => ({
     counter: state.counter
