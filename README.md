@@ -3,7 +3,7 @@ react-boilerplate
 
 My React Boilerplate with Webpack.
 
-Features:   
+### Features:   
  - Webpack 2.3
  - React with Babel Loader
  - React Hot Module Replacement v3.0
@@ -13,6 +13,10 @@ Features:
  - ESLint
  - Jest for Tests
  - Enzyme for React Components Testing
+ 
+### Branchs:
+ - [Redux](https://github.com/BrOrlandi/react-boilerplate/tree/redux)
+ - [Redux + Router](https://github.com/BrOrlandi/react-boilerplate/tree/redux+router)
 
 Based on [gaearon/react-hot-boilerplate](https://github.com/gaearon/react-hot-boilerplate)
 
@@ -20,8 +24,6 @@ Based on the guide available at https://webpack.js.org/guides/hmr-react/
 
 ## TODO
  - Autoprefixer
- - Redux branch
- - React Router
  - Bootstrap
  
 ### Usage
