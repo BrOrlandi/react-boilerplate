@@ -5,6 +5,8 @@ import App from './App';
 import NavigationBar from './NavigationBar';
 import Counter from '../containers/Counter';
 
+import PropTypes from 'prop-type';	
+
 const Root = ({ store }) => (
 	<Provider store={store}>
 		<Router>
@@ -16,5 +18,9 @@ const Root = ({ store }) => (
 		</Router>
 	</Provider>
 );
+
+Root.propTypes = {
+	store: PropTypes.object
+}
 
 export default Root;
