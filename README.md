@@ -1,7 +1,7 @@
 react-boilerplate
 =====================
 
-[![Build Status](https://travis-ci.org/BrOrlandi/react-boilerplate.svg?branch=master)](https://travis-ci.org/BrOrlandi/react-boilerplate)
+[![Build Status](https://travis-ci.org/BrOrlandi/react-boilerplate.svg?branch=redux)](https://travis-ci.org/BrOrlandi/react-boilerplate)
 
 My React Boilerplate with Webpack.
 
