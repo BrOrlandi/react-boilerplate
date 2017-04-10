@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import '../../styles/styles.scss';
 
 import Layout from './Layout';
-import Counter from '../containers/Counter';
 
 // If you use React Router, make this component
 // render <Router> with your routes. Currently,
@@ -14,9 +13,9 @@ import Counter from '../containers/Counter';
 export default class App extends Component {
   render() {
     return (
-      <Layout>
-        <Counter />
-      </Layout>
+        <div>
+            <Layout />
+        </div>
     );
   }
 }
