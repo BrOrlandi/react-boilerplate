@@ -1,13 +1,14 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 
 import Counter from '../src/containers/Counter';
+import store from '../src/store';
 
 describe('Counter component',() => {
     it('should render without throwing an error', ()=>{
-        expect(shallow(<Counter />).find('h2').length).toBe(1);
+        expect(mount(<Counter store={store}/>).find('h1').length).toBe(1);
     });
-    it('should be selectable by class "counter"', ()=>{
-        expect(shallow(<Counter />).find('.counter').length).toBe(1);
+    it('should be selectable by id "counter"', ()=>{
+        expect(mount(<Counter store={store}/>).find('#counter').length).toBe(1);
     });
 });

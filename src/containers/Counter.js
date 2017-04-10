@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 let Counter = ({counter, onIncrement, onDecrement, onReset}) => {
   return(
-    <div>
+    <div id="counter">
       <h1>Counter: {counter}</h1>
       <button onClick={() => onIncrement()}>Increment</button>
       <button onClick={() => onDecrement()}>Decrement</button>
