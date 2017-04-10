@@ -2,10 +2,9 @@ import { AppContainer } from 'react-hot-loader';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore, compose } from 'redux';
-import { Provider } from 'react-redux';
 import counterApp from './reducers';
 
-import App from './components/App';
+import Root from './components/Root';
 
 const store = createStore(
     counterApp,
@@ -19,9 +18,7 @@ const rootEl = document.getElementById('root');
 const render = () =>{
   ReactDOM.render(
     <AppContainer>
-        <Provider store={store}>
-            <App/>
-        </Provider>
+        <Root store={store}/>
     </AppContainer>,
     rootEl
   );
