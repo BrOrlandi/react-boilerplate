@@ -1,18 +1,11 @@
 import { AppContainer } from 'react-hot-loader';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore, compose } from 'redux';
 import { Provider } from 'react-redux';
-import counterApp from './reducers';
 
 import App from './components/App';
 
-const store = createStore(
-    counterApp,
-    compose(
-        window.devToolsExtension ? window.devToolsExtension() : f => f
-    )
-);
+import store from './store';
 
 const rootEl = document.getElementById('root');
 
