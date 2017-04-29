@@ -90,6 +90,13 @@ module.exports = function (env){
         exclude: /node_modules/
       },
       {
+        test: /\.css$/,
+          use: ExtractTextPlugin.extract({
+             fallback: 'style-loader',
+             use: ['css-loader']
+          })
+      },
+      {
             test: /\.scss$/,
             use: extractSass.extract({
                 use: [{
