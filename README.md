@@ -16,7 +16,7 @@ My React Boilerplate with Webpack.
  - Jest for Tests
  - Enzyme for React Components Testing
  
-### Branchs:
+### Branches:
  - [Redux](https://github.com/BrOrlandi/react-boilerplate/tree/redux)
  - [Redux + Router](https://github.com/BrOrlandi/react-boilerplate/tree/redux+router)
 
